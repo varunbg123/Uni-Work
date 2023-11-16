@@ -1,0 +1,163 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+# Date created = 09:13:07  April 18, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		MorseDecoder_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+
+set_global_assignment -name TOP_LEVEL_ENTITY MorseDecoder
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:13:07  APRIL 18, 2023"
+
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name BOARD "DE1-SoC Board"
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_AJ17 -to LT24Data[0]
+set_location_assignment PIN_AJ19 -to LT24Data[1]
+set_location_assignment PIN_AK19 -to LT24Data[2]
+set_location_assignment PIN_AK18 -to LT24Data[3]
+set_location_assignment PIN_AE16 -to LT24Data[4]
+set_location_assignment PIN_AF16 -to LT24Data[5]
+set_location_assignment PIN_AG17 -to LT24Data[6]
+set_location_assignment PIN_AA18 -to LT24Data[7]
+set_location_assignment PIN_AA19 -to LT24Data[8]
+set_location_assignment PIN_AE17 -to LT24Data[9]
+set_location_assignment PIN_AC20 -to LT24Data[10]
+set_location_assignment PIN_AH19 -to LT24Data[11]
+set_location_assignment PIN_AJ20 -to LT24Data[12]
+set_location_assignment PIN_AH20 -to LT24Data[13]
+set_location_assignment PIN_AK21 -to LT24Data[14]
+set_location_assignment PIN_AD19 -to LT24Data[15]
+set_location_assignment PIN_AG20 -to LT24Reset_n
+set_location_assignment PIN_AG16 -to LT24RS
+set_location_assignment PIN_AD20 -to LT24CS_n
+set_location_assignment PIN_AH18 -to LT24Rd_n
+set_location_assignment PIN_AH17 -to LT24Wr_n
+set_location_assignment PIN_AJ21 -to LT24LCDOn
+set_location_assignment PIN_AA16 -to clock
+set_location_assignment PIN_AD10 -to globalReset
+set_location_assignment PIN_W20 -to resetApp
+set_location_assignment PIN_Y16 -to inputButton[0]
+set_location_assignment PIN_W15 -to inputButton[1]
+set_location_assignment PIN_AA15 -to inputButton[2]
+set_location_assignment PIN_AE26 -to segment[0]
+set_location_assignment PIN_AE27 -to segment[1]
+set_location_assignment PIN_AE28 -to segment[2]
+set_location_assignment PIN_AG27 -to segment[3]
+set_location_assignment PIN_AF28 -to segment[4]
+set_location_assignment PIN_AG28 -to segment[5]
+set_location_assignment PIN_AH28 -to segment[6]
+set_location_assignment PIN_V16 -to data_out[0]
+set_location_assignment PIN_W16 -to data_out[1]
+set_location_assignment PIN_V17 -to data_out[2]
+set_location_assignment PIN_V18 -to data_out[3]
+set_location_assignment PIN_W17 -to data_out[4]
+set_location_assignment PIN_AB27 -to morse1[3]
+set_location_assignment PIN_V25 -to morse1[0]
+set_location_assignment PIN_AA28 -to morse1[1]
+set_location_assignment PIN_Y27 -to morse1[2]
+set_location_assignment PIN_AA24 -to morse2[0]
+set_location_assignment PIN_Y23 -to morse2[1]
+set_location_assignment PIN_Y24 -to morse2[2]
+set_location_assignment PIN_W22 -to morse2[3]
+set_location_assignment PIN_AC25 -to morse3[3]
+set_location_assignment PIN_AD26 -to morse3[0]
+set_location_assignment PIN_AC27 -to morse3[1]
+set_location_assignment PIN_AD25 -to morse3[2]
+set_location_assignment PIN_AB23 -to morse4[0]
+set_location_assignment PIN_AE29 -to morse4[1]
+set_location_assignment PIN_AD29 -to morse4[2]
+set_location_assignment PIN_AC28 -to morse4[3]
+set_location_assignment PIN_AJ29 -to morse5[0]
+set_location_assignment PIN_AH29 -to morse5[1]
+set_location_assignment PIN_AH30 -to morse5[2]
+set_location_assignment PIN_AG30 -to morse5[3]
+set_location_assignment PIN_W19 -to data_out[5]
+set_location_assignment PIN_Y19 -to inputLED
+set_location_assignment PIN_AA14 -to clear
+set_location_assignment PIN_AE12 -to charSize
+set_location_assignment PIN_AB26 -to morse1[4]
+set_location_assignment PIN_AA26 -to morse1[5]
+set_location_assignment PIN_AA25 -to morse1[6]
+set_location_assignment PIN_W24 -to morse2[4]
+set_location_assignment PIN_V23 -to morse2[5]
+set_location_assignment PIN_W25 -to morse2[6]
+set_location_assignment PIN_AB28 -to morse3[4]
+set_location_assignment PIN_AB25 -to morse3[5]
+set_location_assignment PIN_AB22 -to morse3[6]
+set_location_assignment PIN_AD30 -to morse4[4]
+set_location_assignment PIN_AC29 -to morse4[5]
+set_location_assignment PIN_AC30 -to morse4[6]
+set_location_assignment PIN_AF29 -to morse5[4]
+set_location_assignment PIN_AF30 -to morse5[5]
+set_location_assignment PIN_AD27 -to morse5[6]
+set_global_assignment -name VERILOG_FILE MorseOutput.v
+set_global_assignment -name VERILOG_FILE MorseDecoderwithStateMachine.v
+set_global_assignment -name VERILOG_FILE HexTo7Segment.v
+set_global_assignment -name VERILOG_FILE DisplayTwoDigitDecimal.v
+set_global_assignment -name VERILOG_FILE DataConverter.v
+set_global_assignment -name VERILOG_FILE ClockDivider.v
+set_global_assignment -name VERILOG_FILE MorseLED.v
+set_global_assignment -name VERILOG_FILE MorseToASCII.v
+set_global_assignment -name VERILOG_FILE MorseDisplay.v
+set_global_assignment -name VERILOG_FILE LT24Top.v
+set_global_assignment -name VERILOG_FILE LT24Display.v
+set_global_assignment -name VERILOG_FILE CharacterSequential.v
+set_global_assignment -name QIP_FILE CharacterROM.qip
+set_global_assignment -name VERILOG_FILE CharacterDraw.v
+set_global_assignment -name VERILOG_FILE CharacterClock.v
+set_global_assignment -name VERILOG_FILE MorseDecoder.v
+set_location_assignment PIN_AB12 -to morseInput[0]
+set_location_assignment PIN_AC12 -to morseInput[1]
+set_location_assignment PIN_AF9 -to morseInput[2]
+set_location_assignment PIN_AF10 -to morseInput[3]
+set_location_assignment PIN_AD11 -to morseInput[4]
+set_location_assignment PIN_AD12 -to morseInput[5]
+set_location_assignment PIN_AE18 -to sound
+set_location_assignment PIN_Y21 -to light
+set_location_assignment PIN_AC9 -to switch
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
